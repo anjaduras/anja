@@ -1,0 +1,133 @@
+@font-face {
+    font-family: "Opsilon";
+    src: url("Opsilon-xRj8m.ttf") format("truetype");
+}
+
+:root {
+    --font-logo: "Opsilon";
+    --font-sub: "Momo Signature", cursive;
+    --font-main: "Merriweather", serif;
+
+    --font-size-base: clamp(1rem, 4vw, 20px);
+    --font-size-logo: clamp(3rem, 12vw, 120px);
+    --line-height: 1.6;
+    --text-align: center;
+
+    --color-header-footer: #de2865;
+    --color-main: #f9f8f6;
+    --color-logo: #1D1D1D;
+    --color-text: #2A2A2A;
+
+    --img-size: 300px;
+    --logo-img: 800px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: var(--font-logo);
+    font-size: var(--font-size-logo);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: var(--font-main);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height);
+    text-align: var(--text-align);
+    color: var(--color-text);
+    background: var(--color-main);
+}
+
+img {
+    width: var(--img-size);
+}
+
+.journal-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.journal-wrapper img {
+    display: block;
+    width: var(--logo-img);
+    border-radius: 5%;
+}
+
+.journal-wrapper h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* perfectly center */
+    font-family: var(--font-logo);
+    pointer-events: none;
+}
+
+.pagecontent{
+    padding: 7%;
+}
+
+.journal-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .bookmarks {
+    position: absolute;
+    top: 10%;              /* adjust vertical position */
+    right: -115px;          /* moves bookmarks outside the journal */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .bookmarks a {
+    display: block;
+    background: #de2865;      /* bookmark color */
+    color: white;
+    padding: 10px 6px;
+    font-family: var(--font-main);
+    text-decoration: none;
+    border-radius: 4px 4px 0 0;
+    transform: rotate(90deg); /* makes text vertical */
+    transform-origin: left top;
+    white-space: nowrap;      /* prevents text wrapping */
+    font-weight: bold;
+  }
+  
+  .bookmarks a:hover {
+    background: #b91c50;
+  }
+  
+  .bookmark-top {
+    position: absolute;
+    top: -20px;      /* lifts it above the image */
+    right: 20px;     /* positions it near the right corner */
+  }
+  
+  .bookmark-top a {
+    display: block;
+    background: #eaacb7;      /* soft pink ribbon */
+    color: #7d1236;
+    padding: -10px 10px 10px;
+    text-decoration: none;
+    font-family: var(--font-main);
+    border-radius: 5px 5px 0 0; /* ribbon bottom shape */
+  }
+  
+  .bookmark-top a:hover {
+    background: #d3919e;
+  }
+  
